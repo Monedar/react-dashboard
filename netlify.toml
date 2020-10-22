@@ -5,6 +5,5 @@
   force = false
 
  [build]
-  base    = "/examples/demo"
   publish = "/build"
   command = "npm run build"
