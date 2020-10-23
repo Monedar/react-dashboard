@@ -111,6 +111,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "https://monedadmin.netlify.app:5000",
   "browserslist": {
     "production": [
       ">0.2%",
