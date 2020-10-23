@@ -7,12 +7,16 @@ import expressGraphQL from 'express-graphql';
 import schema from '../src/data/schema'
 import dotenv from 'dotenv';
 import config from './config';
+import cors from 'cors';
 
+// connect with db.
+import './db';
 
 const app = express();
 app.use(helmet());
 app.use(cookieParser());
 app.use(express.json())
+app.use(cors())
 app.use(express.urlencoded({extended: true}))
 
 dotenv.config();
@@ -28,6 +32,7 @@ app.post('/login', (req, res) => {
   // replace with real database check in production
   // const user = graphql.find(req.login, req.password);
   let user = false;
+
   const login = req.body.login; // eslint-disable-line
   const password = req.body.password; // eslint-disable-line
   if (login === 'user' && password === 'password') {

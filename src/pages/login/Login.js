@@ -122,9 +122,9 @@ class Login extends React.Component {
                   <div className="d-flex justify-content-between align-items-center">
                     <a href="#" className="fs-sm">Trouble with account?</a> {/* eslint-disable-line */}
                     <div>
-                      <Button color="default" size="sm">
+                      {/* <Button color="default" size="sm">
                         Create an account
-                      </Button>
+                      </Button> */}
                       <Button color="success" size="sm" type="submit">
                         {this.props.isFetching ? 'Loading...' : 'Login'}
                       </Button>
